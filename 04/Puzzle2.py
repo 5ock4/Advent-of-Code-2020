@@ -21,50 +21,35 @@ def isValid(fields_list):
 def isContentValid(fields_dict):
   is_valid = True
 
-  for key in fields_dict:
-    if key == 'byr':
-      if not(re.search('^\d{4}$',fields_dict[key]) and 1920 <= int(fields_dict[key]) <= 2002):
-        is_valid = False
-        print(f"{key} : {fields_dict[key]} is not valid")
-        break
+  if not(re.search('^\d{4}$',fields_dict['byr']) and 1920 <= int(fields_dict['byr']) <= 2002):
+    is_valid = False
+    print(f"byr: {fields_dict['byr']} is not valid")
 
-    if key == 'iyr':
-      if not(re.search('^\d{4}$',fields_dict[key]) and 2010 <= int(fields_dict[key]) <= 2020):
-        is_valid = False
-        print(f"{key} : {fields_dict[key]} is not valid")
-        break
+  if not(re.search('^\d{4}$',fields_dict['iyr']) and 2010 <= int(fields_dict['iyr']) <= 2020):
+    is_valid = False
+    print(f"iyr : {fields_dict['iyr']} is not valid")
 
-    if key == 'eyr':
-      if not(re.search('^\d{4}$',fields_dict[key]) and 2020 <= int(fields_dict[key]) <= 2030):
-        is_valid = False
-        print(f"{key} : {fields_dict[key]} is not valid")
-        break
+  if not(re.search('^\d{4}$',fields_dict['eyr']) and 2020 <= int(fields_dict['eyr']) <= 2030):
+    is_valid = False
+    print(f"eyr : {fields_dict['eyr']} is not valid")
 
-    if key == 'hgt':
-      if not(re.search('\d+(in|cm)',fields_dict[key]) and \
-        (( fields_dict[key][-2:] == 'cm' and 150 <= int(re.findall('\d+', fields_dict[key])[0]) <= 193) or \
-        ( fields_dict[key][-2:] == 'in' and 59 <= int(re.findall('\d+', fields_dict[key])[0]) <= 76))):
-        is_valid = False
-        print(f"{key} : {fields_dict[key]} is not valid")
-        break
+  if not(re.search('\d+(in|cm)',fields_dict['hgt']) and \
+    (( fields_dict['hgt'][-2:] == 'cm' and 150 <= int(re.findall('\d+', fields_dict['hgt'])[0]) <= 193) or \
+    ( fields_dict['hgt'][-2:] == 'in' and 59 <= int(re.findall('\d+', fields_dict['hgt'])[0]) <= 76))):
+    is_valid = False
+    print(f"hgt : {fields_dict['hgt']} is not valid")
 
-    if key == 'hcl':
-      if not(re.search('#([0-9]|[a-f]){6}', fields_dict[key])):
-        is_valid = False
-        print(f"{key} : {fields_dict[key]} is not valid")
-        break
+  if not(re.search('#([0-9]|[a-f]){6}', fields_dict['hcl'])):
+    is_valid = False
+    print(f"hcl : {fields_dict['hcl']} is not valid")
 
-    if key == 'ecl': 
-      if not(re.search('amb|blu|brn|gry|grn|hzl|oth',fields_dict[key])):
-        is_valid = False
-        print(f"{key} : {fields_dict[key]} is not valid")
-        break
+  if not(re.search('amb|blu|brn|gry|grn|hzl|oth',fields_dict['ecl'])):
+    is_valid = False
+    print(f"ecl : {fields_dict['ecl']} is not valid")
 
-    if key == 'pid':
-      if not(re.search('^\d{9}$',fields_dict[key])):
-        is_valid = False
-        print(f"{key} : {fields_dict[key]} is not valid")
-        break
+  if not(re.search('^\d{9}$',fields_dict['pid'])):
+    is_valid = False
+    print(f"pid : {fields_dict['pid']} is not valid")
 
   return is_valid
 
