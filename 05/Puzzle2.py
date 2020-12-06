@@ -21,7 +21,7 @@ def computeSeatPos(binary_tree):
   return position
 
 positions_list = [ computeSeatPos(line) for line in lines ]
-positions_IDs = [ pos['row']*8+pos['col'] for pos in positions_list]
+positions_IDs = [ pos['row']*8+pos['col'] for pos in positions_list ]
 
 # Sorting list of dictionaries
 positions_sorted = sorted(positions_list, key = lambda i: (i['row'], i['col']))
