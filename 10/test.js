@@ -1,4 +1,4 @@
-math = require('./node_modules/mathjs')
+math = require('mathjs/lib/cjs')
 
 // console.log( math.combinations(5,5) +
 // math.combinations(5,4) + 
