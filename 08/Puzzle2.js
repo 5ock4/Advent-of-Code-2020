@@ -27,6 +27,8 @@ const performOperation = (state) => {
   return(state)
 }
 
+// TODO: brutal force is enough... check github Befeleme: recursion solution
+
 let i = 0
 let highestOcc = 0
 let instructionsOld = instructions

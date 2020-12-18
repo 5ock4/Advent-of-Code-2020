@@ -1,6 +1,7 @@
 const { forEach } = require('mathjs');
 
 math = require('../node_modules/mathjs')
+// TODO: completly rewrite - probably just split to chunks and multiply it together
 
 require('util').inspect.defaultOptions.maxArrayLength = null;
 let jolts = require('fs').readFileSync('input_tst1.txt', {encoding: 'utf-8'})

@@ -1,7 +1,7 @@
 const lodash = require('../node_modules/lodash')
 const math = require('../node_modules/mathjs')
 const { e, i } = require('mathjs');
-
+// TODO: something is missing here - needs to be debugged
 // require('util').inspect.defaultOptions.maxArrayLength = null;
 
 let grid = require('fs').readFileSync('input_tst.txt', {encoding: 'utf-8'})

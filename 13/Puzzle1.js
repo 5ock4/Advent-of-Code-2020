@@ -8,7 +8,6 @@ const buses = notes[1].split(',')
                       
 const minutes = buses.map(v => parseInt(v) - timestamp % parseInt(v))
 
-
 console.log(Math.min(...minutes) * buses[minutes.indexOf(Math.min(...minutes))])
 console.log(notes)
 console.log(timestamp)
